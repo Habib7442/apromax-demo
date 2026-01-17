@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: theme("colors.surface.light.base");
+    --foreground: theme("colors.text.light.primary");
+    --card: theme("colors.ui.light.card");
+    --card-foreground: theme("colors.text.light.primary");
+    --popover: theme("colors.surface.light.elevated");
+    --popover-foreground: theme("colors.text.light.primary");
+    --primary: theme("colors.primary.DEFAULT");
+    --primary-foreground: theme("colors.surface.light.base");
+    --secondary: theme("colors.primary.600");
+    --secondary-foreground: theme("colors.surface.light.base");
+    --muted: theme("colors.text.light.disabled");
+    --muted-foreground: theme("colors.text.light.secondary");
+    --accent: theme("colors.primary.500");
+    --accent-foreground: theme("colors.surface.light.base");
+    --destructive: theme("colors.feedback.error.light");
+    --destructive-foreground: theme("colors.surface.light.base");
+    --border: theme("colors.ui.light.divider");
+    --input: theme("colors.ui.light.divider");
+    --ring: theme("colors.primary.500");
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: theme("colors.surface.dark.base");
+    --foreground: theme("colors.text.dark.primary");
+    --card: theme("colors.ui.dark.card");
+    --card-foreground: theme("colors.text.dark.primary");
+    --popover: theme("colors.surface.dark.elevated");
+    --popover-foreground: theme("colors.text.dark.primary");
+    --primary: theme("colors.primary.500");
+    --primary-foreground: theme("colors.text.dark.primary");
+    --secondary: theme("colors.primary.600");
+    --secondary-foreground: theme("colors.text.dark.primary");
+    --muted: theme("colors.text.dark.disabled");
+    --muted-foreground: theme("colors.text.dark.secondary");
+    --accent: theme("colors.primary.600");
+    --accent-foreground: theme("colors.text.dark.primary");
+    --destructive: theme("colors.feedback.error.dark");
+    --destructive-foreground: theme("colors.text.dark.primary");
+    --border: theme("colors.ui.dark.divider");
+    --input: theme("colors.ui.dark.divider");
+    --ring: theme("colors.primary.600");
+  }
+}
+
+@layer base {
+  * {
+    @apply border-ui-light-divider dark:border-ui-dark-divider;
+  }
+  body {
+    @apply bg-white dark:bg-gray-950;
+  }
+}
+
+.bg-background {
+  @apply bg-surface-light-paper dark:bg-surface-dark-paper;
+}
+
+/* Completely hide scrollbars but maintain scroll functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* For IE and Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+/* Ensure proper scrolling behavior */
+/* Ensure proper scrolling behavior */
+html, body {
+  overflow-x: hidden;
+  background-color: #030712; /* gray-950 to match footer gap */
+}
+
+/* Blog content spacing improvements */
+.prose {
+  line-height: 1.75;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose li p {
+  margin-bottom: 0;
+}
+
+.prose img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

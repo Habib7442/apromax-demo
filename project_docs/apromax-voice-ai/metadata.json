@@ -1,0 +1,7 @@
+{
+  "name": "Apromax AI - Precision Engineering Assistant",
+  "description": "A high-performance voice-enabled platform for Apromax Engineering, featuring an AI assistant for real-time consultations and appointment booking via the Gemini Live API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
