@@ -29,6 +29,9 @@ const nextConfig = {
     ],
     qualities: [100],
   },
+  turbopack: {
+    // Adding empty object to silence conflict error with next-pwa webpack config
+  },
 };
 
 export default withPWA(nextConfig);
